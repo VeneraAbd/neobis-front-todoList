@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>todoList</title>
+</head>
+<body>
+    <div class="container">
+        <!-- input for writing a name -->
+        <div class="name-container">
+            <label for="user-name">What`s up,</label>
+            <input type="text" placeholder="Name here" id="user-name">
+        </div>
+        
+        <!-- input for adding a new todo -->
+        <p class="heading">CREATE A TODO</p>
+        <div class="create-todo">
+            <label for="add-todo">What`s on your todo list?</label>
+            <input type="text" placeholder="e.g. get a milk" id="add-todo" name="create-todo"> 
+        </div>
+        
+        <!-- radio button container -->
+        <p class="heading">Pick a category</p>
+        <div class="todo-categories">
+            <div class="category">
+                <input type="radio" value="business" id="business" name="category"/>
+                <label for="business" class="radio-label">Business</label>
+            </div>
+            <div class="category">
+                <input type="radio" value="personal" id="personal" name="category"/>
+                <label for="personal" class="radio-label">Personal</label>
+            </div>
+        </div>    
+        <button class="add-button">Add todo</button>
+        <p>TODO LIST</p>
+        <ul class="list-container">
+            <li><input type="checkbox" id="checkbox">Task 1</li>
+            <li><input type="checkbox">Task 2</li>
+            <li><input type="checkbox">Task 3</li>
+        </ul>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
