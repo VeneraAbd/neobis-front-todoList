@@ -7,41 +7,93 @@
     <title>todoList</title>
 </head>
 <body>
-    <div class="container">
+    <main class="container">
+        
         <!-- input for writing a name -->
-        <div class="name-container">
-            <label for="user-name">What`s up,</label>
-            <input type="text" placeholder="Name here" id="user-name">
-        </div>
-        
+        <section class="name-container">
+            <h2 class="title">What`s up, 
+                <input 
+                    type="text" 
+                    placeholder="Name here" 
+                    id="user-name"
+                />
+            </h2>
+        </section>
+
         <!-- input for adding a new todo -->
-        <p class="heading">CREATE A TODO</p>
-        <div class="create-todo">
-            <label for="add-todo">What`s on your todo list?</label>
-            <input type="text" placeholder="e.g. get a milk" id="add-todo" name="create-todo"> 
-        </div>
-        
-        <!-- radio button container -->
-        <p class="heading">Pick a category</p>
-        <div class="todo-categories">
-            <div class="category">
-                <input type="radio" value="business" id="business" name="category"/>
-                <label for="business" class="radio-label">Business</label>
+        <section class="create-todo">
+            <h3 class="heading3">CREATE A TODO</h3>
+            
+            <form id="create-todo__form">
+                <h4 class="heading4">What`s on your todo list?</h4>
+                <input 
+                    type="text" 
+                    placeholder="e.g. get a milk" 
+                    id="add-todo" 
+                    name="content"
+                > 
+            
+                <!-- radio buttons business/personal -->
+                <h4 class="heading4">Pick a category</h4>
+                <div class="todo-categories">
+                    <div class="category">
+                        <input 
+                            type="radio" 
+                            value="business" 
+                            id="business" 
+                            class="circle business"
+                            name="category"
+                        />
+                        <label for="business" class="radio-label">Business</label>
+                    </div>
+                    <div class="category">
+                        <input 
+                            type="radio" 
+                            value="personal" 
+                            id="personal" 
+                            class="circle personal"
+                            name="category"
+                        />
+                        <label for="personal" class="radio-label">Personal</label>
+                    </div>
+                </div>    
+                <input type="submit" class="add-button" value="Add todo"/>
+            </form>
+        </section>
+
+        <!-- Todo list section -->
+        <section class="todo-list">
+            <h3 class="heading3">TODO LIST</h3>
+            <div class="list" id="todo-list">
+                <!-- <div class="todo-item done">
+                    <label>
+                        <input type="checkbox" class="circle business">
+                    </label>
+                    <div class="todo-content">
+                        <input type="text" value="make a decision" readonly>
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div> -->
+                <!-- <div class="todo-item">
+                    <label>
+                        <input type="checkbox" class="circle personal">
+                    </label>
+                    <div class="todo-content">
+                        <input type="text" value="make dinner" readonly>
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div> -->
             </div>
-            <div class="category">
-                <input type="radio" value="personal" id="personal" name="category"/>
-                <label for="personal" class="radio-label">Personal</label>
-            </div>
-        </div>    
-        <button class="add-button">Add todo</button>
-        <p>TODO LIST</p>
-        <ul class="list-container">
-            <li><input type="checkbox" id="checkbox">Task 1</li>
-            <li><input type="checkbox">Task 2</li>
-            <li><input type="checkbox">Task 3</li>
-        </ul>
-    </div>
+        </section>
+    </main>
 
     <script type="module" src="index.js"></script>
+    <script src="tasks.js"></script>
 </body>
 </html>
